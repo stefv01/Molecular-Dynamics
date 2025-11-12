@@ -482,7 +482,7 @@ class molecular_motion:
             var_A = np.var(thinned_data)
 
             # Compute raw error (before conversion)
-            error = np.sqrt((2 * tau_estimated / len(thinned_data)) * var_A)
+            error = np.sqrt((2 * tau_estimated / len(data)) * var_A)
         else:
             error = np.nan  # If τ estimation fails, return NaN
 
@@ -510,7 +510,7 @@ class molecular_motion:
         np.ndarray
             Block-averaged data (statistically independent).
         """
-        max_block_size = int(np.round(tau*5))   # Ensure it's an integer
+        max_block_size = int(np.round(5*tau)) 
         N = len(data)
     
         block_sizes = []
@@ -554,11 +554,10 @@ class molecular_motion:
         Returns:
         -------
         np.ndarray
-            Bootstrap resampled datasets (num_resamples x len(data)).
+            Bootstrap resampled datasets (num_resamples * len(data)).
         """
         N = len(data)  # Number of independent blocks
         bootstrap_samples = np.zeros((num_resamples, N))  # Store resampled datasets
-        bootstrap_means = np.zeros(num_resamples)  # Store means of each bootstrap dataset
 
         # Perform bootstrap resampling
         for i in range(num_resamples):
