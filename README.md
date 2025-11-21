@@ -7,8 +7,8 @@ A Python-based molecular dynamics (MD) engine simulating Argon atoms interacting
 The simulation models **Argon** atoms as classical point particles governed by Newtonian mechanics.
 
 * **Interactions**: Particles interact via the **Lennard-Jones (LJ) Potential**:
-    $$U_{LJ}(r) = 4\epsilon \left[ \left(\frac{\sigma}{r}\right)^{12} - \left(\frac{\sigma}{r}\right)^{6} \right]$$
-    Where $\sigma$ represents the finite distance at which the inter-particle potential is zero, and $\epsilon$ is the depth of the potential well.
+    $$U_{LJ}(r) = 4\epsilon \left[ \left(\frac{\sigma}{r}\right)^{12} - \left(\frac{\sigma}{r}\right)^{6} \right],$$
+    where $\sigma$ represents the finite distance at which the inter-particle potential is zero, and $\epsilon$ is the depth of the potential well.
 * **Ensemble**: Microcanonical (NVE) - Total energy is conserved (approximately, depending on the integrator).
 * **Units**: The simulation utilizes **dimensionless units** internally to ensure numerical stability, scaling by $\sigma$ (length), $\epsilon$ (energy), and $m$ (mass).
 
