@@ -1,4 +1,4 @@
-# Molecular Dynamics Simulation of Argon
+# Molecular Dynamics Simulation of Argon Atoms
 
 A Python-based molecular dynamics (MD) engine simulating Argon atoms interacting via the Lennard-Jones potential. This project explores the time evolution of a multi-particle system, implementing MD concepts such as periodic boundary conditions, lattice initialization, and symplectic integration.
 
